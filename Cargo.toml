@@ -1,0 +1,16 @@
+[package]
+name = "vdump"
+version = "0.1.0"
+edition = "2024"
+description = "Inspect Linux vDSO and vvar mappings"
+rust-version = "1.97"
+
+[profile.release]
+codegen-units = 1
+lto = "thin"
+strip = true
+panic = "abort"
+
+[lints.rust]
+unsafe_op_in_unsafe_fn = "deny"
+
